@@ -10,7 +10,7 @@ Validate CE Programs Pages
     [Tags]    smoke    ce    web    prgm
     Access CE Programs Page    all
     Check For Errors In CE Page    progr
-    
+
 Validate CE Micro Credentials Pages
     [Documentation]    Validating each of the CE programs
     [Tags]    smoke    ce    web    prgm

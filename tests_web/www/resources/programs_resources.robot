@@ -4,6 +4,7 @@ Library     Collections
 Library     Selenium2Library
 Library     ..//..//..//tools//utils//url_formatter.py
 Resource    ..//page_obj//programs_pageobj.robot
+Resource    ..//..//web_utils//util.robot
 
 
 *** Variables ***
@@ -19,8 +20,7 @@ Access Programs Page
     [Arguments]    ${pgm_type}
     ${page_url}    Get Base Url    ${site}    ${env}
     Set Test Variable    ${programs_url}    ${page_url}${url_tail_pgm}[${pgm_type}]
-    Open Browser    ${programs_url}    ${browser}
-    Maximize Browser Window
+    Open Url In Browser    ${docker}    ${programs_url}    ${browser}
     Wait Until Page Contains Element    ${btn_ApplyFilters_xpath}
 
 Click On Programs Sequentially
@@ -85,7 +85,7 @@ Check For Errors In Programs
         Click Element    ${elem}
         ${err}    Get Element Count    ${lbl_404Error_xpath}
         IF    '${err}'=='1'    Append To List    ${pgm_list}    ${title}
-        #Check Errors In The Program Page Content
+        # Check Errors In The Program Page Content
         Go To    ${programs_url}
         Wait Until Page Contains Element    ${btn_ApplyFilters_xpath}    10
         Log    ${pgm_list}

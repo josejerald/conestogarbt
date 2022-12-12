@@ -19,6 +19,5 @@ def get_base_url(site, env):
         return {
             "dev": "https://continuing-educationdev.conestogac.on.ca/",
             "test": "https://continuing-educationtest.conestogac.on.ca/",
-            "prod": "https://continuing-education.conestogac.on.ca/"}[
-            env.lower()
-        ]
+            "prod": "https://continuing-education.conestogac.on.ca/",
+        }[env.lower()]

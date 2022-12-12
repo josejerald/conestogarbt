@@ -4,6 +4,7 @@ Library     Collections
 Library     Selenium2Library
 Library     ..//..//..//tools//utils//url_formatter.py
 Resource    ..//page_obj//admissions_pageobj.robot
+Resource    ..//..//web_utils//util.robot
 
 
 *** Variables ***
@@ -15,8 +16,7 @@ Access Admissions Section In Corp Website
     [Documentation]    Accessing Admissions section in Corp Website
     ${page_url}    Get Base Url    ${site}    ${env}
     Set Test Variable    ${programs_url}    ${page_url}${url_tail_adms}
-    Open Browser    ${programs_url}    ${browser}
-    Maximize Browser Window
+    Open Url In Browser    ${docker}    ${programs_url}    ${browser}
     Wait Until Page Contains Element    ${lnk_homeAdm_xpath}
 
 Access Admissions Page From Dropdown Menu

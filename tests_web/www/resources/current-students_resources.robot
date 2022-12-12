@@ -4,6 +4,7 @@ Library     Collections
 Library     Selenium2Library
 Library     ..//..//..//tools//utils//url_formatter.py
 Resource    ..//page_obj//current-students_pageobj.robot
+Resource    ..//..//web_utils//util.robot
 
 
 *** Variables ***
@@ -17,8 +18,7 @@ Access Current Students Sub Portal
     [Documentation]    Accessing Current Students Sub Portal
     ${page_url}    Get Base Url    ${site}    ${env}
     Set Test Variable    ${url}    ${page_url}${url_tail_curstu}
-    Open Browser    ${url}    ${browser}
-    Maximize Browser Window
+    Open Url In Browser    ${docker}    ${url}    ${browser}
     Wait Until Page Contains Element    ${lbl_curStuHeader_xpath}
 
 Check Errors In The Page

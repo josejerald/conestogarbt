@@ -11,7 +11,6 @@ Access Corp Website Home Page
     [Documentation]    Accessing home page URL
     ${page_url}    Get Base Url    ${site}    ${env}
     Open Url In Browser    ${docker}    ${page_url}    ${browser}
-    
 
 Validate Logo And Banner In Corp Website Home Page
     [Documentation]    Check if logo is present in header

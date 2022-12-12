@@ -4,6 +4,7 @@ Library     Collections
 Library     Selenium2Library
 Library     ..//..//..//tools//utils//url_formatter.py
 Resource    ..//page_obj//ce_pageobj.robot
+Resource    ..//..//web_utils//util.robot
 
 
 *** Variables ***
@@ -19,8 +20,7 @@ Access CE Programs Page
     [Arguments]    ${pgm_type}
     ${page_url}    Get Base Url    ${site}    ${env}
     Set Test Variable    ${programs_url}    ${page_url}${ce_pgm}[${pgm_type}]
-    Open Browser    ${programs_url}    ${browser}
-    Maximize Browser Window
+    Open Url In Browser    ${docker}    ${programs_url}    ${browser}
     Wait Until Page Contains Element    ${btn_ApplyFilters_xpath}
 
 Get Program Count

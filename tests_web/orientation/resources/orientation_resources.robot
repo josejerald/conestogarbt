@@ -4,6 +4,7 @@ Library     Collections
 Library     Selenium2Library
 Library     ..//..//..//tools//utils//url_formatter.py
 Resource    ..//page_obj//orientation_pageobj.robot
+Resource    ..//..//web_utils//util.robot
 
 
 *** Variables ***
@@ -19,8 +20,7 @@ Resource    ..//page_obj//orientation_pageobj.robot
 Access Orientation Sub Portal
     [Documentation]    Accessing Orientation Homepage URL
     ${page_url}    Get Base Url    ${site}    ${env}
-    Open Browser    ${page_url}    ${browser}
-    Maximize Browser Window
+    Open Url In Browser    ${docker}    ${page_url}    ${browser}
     Wait Until Page Contains Element    ${lbl_ortnHeader_xpath}
     Page Should Contain Element    ${btn_ortVwChklist_xpath}
     Page Should Contain Element    ${lnk_ortEmail_xpath}

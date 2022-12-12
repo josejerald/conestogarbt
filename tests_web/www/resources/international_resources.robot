@@ -4,6 +4,7 @@ Library     Collections
 Library     Selenium2Library
 Library     ..//..//..//tools//utils//url_formatter.py
 Resource    ..//page_obj//international_pageobj.robot
+Resource    ..//..//web_utils//util.robot
 
 
 *** Variables ***
@@ -15,8 +16,7 @@ Access International Sub App
     [Documentation]    Accessing International Subapp home page
     ${page_url}    Get Base Url    ${site}    ${env}
     Set Test Variable    ${cur_stu_url}    ${page_url}${url_tail_int}
-    Open Browser    ${cur_stu_url}    ${browser}
-    Maximize Browser Window
+    Open Url In Browser    ${docker}    ${cur_stu_url}    ${browser}
     Wait Until Page Contains Element    ${lbl_intrntlTitle_xpath}
 
 Validate Title And Content In International Home Page
