@@ -1,0 +1,8 @@
+### site
+https://gitlab.com/supatchakorn.w/seleniumchromerobotframeworkindocker
+
+### The below command will create docket image from the Dockerfile
+docker build --rm -f "Dockerfile" -t gcrobot:qa .
+
+#The below command will create the container and run the robotframework
+docker run --rm -v %cd%:/workspace:cached -w /workspace gcrobot:qa python3 -m robot -v docker:true -v site:www -v env:test01 -v browser:chrome -i docker --outputdir ./report ./

@@ -1,0 +1,11 @@
+robotframework
+robotframework-selenium2library
+robotframework-requests
+robotframework-pabot
+webdrivermanager
+robotframework-tidy
+black
+pandas==1.0.5
+urllib3==1.25.9
+selenium
+pyvirtualdisplay
