@@ -1,7 +1,7 @@
 *** Settings ***
 Library     Selenium2Library
-Resource    ${CURDIR}//..//page_obj//home_pageObj.robot
-Resource    ${CURDIR}//..//page_obj//header_pageObj.robot
+Resource    ${CURDIR}//..//page_obj//home_pageobj.robot
+Resource    ${CURDIR}//..//page_obj//header_pageobj.robot
 Library     ${CURDIR}//..//..//..//tools//utils//url_formatter.py
 Resource    ${CURDIR}//..//..//web_utils//util.robot
 
