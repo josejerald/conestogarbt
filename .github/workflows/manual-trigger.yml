@@ -13,4 +13,4 @@ jobs:
       run: docker build --rm -f "Dockerfile" -t gcrobot:qa .
     
     - name: Run the tests
-      run: docker run --rm -v %cd%:/workspace:cached -w /workspace gcrobot:qa python3 -m robot -v docker:true -v site:www -v env:test01 -v browser:chrome -i docker --outputdir ./report ./
+      run: docker run --rm -v $(pwd):/workspace:cached -w /workspace gcrobot:qa python3 -m robot -v docker:true -v site:www -v env:test01 -v browser:chrome -i docker --outputdir ./report ./
