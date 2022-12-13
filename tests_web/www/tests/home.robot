@@ -13,7 +13,7 @@ Validate Corp Website Home Page Access
 
 Validate Corp Website Home Page Events Section
     [Documentation]    Valdiating if Event section in Corporate website home page
-    [Tags]    smoke    www    web    home
+    [Tags]    smoke    www    web    home    docker
     Access Corp Website Home Page
     Validate Event Section In Corp Website Home Page
 
