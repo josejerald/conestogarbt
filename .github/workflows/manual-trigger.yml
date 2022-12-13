@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Smoke Trigger
 
 on:
   workflow_dispatch:
