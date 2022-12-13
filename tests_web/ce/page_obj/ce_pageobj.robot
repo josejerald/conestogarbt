@@ -7,4 +7,4 @@ ${txt_discontPrgm_xpath}
 ...                             //p[contains(text(),"This program is no longer accepting new applicants.")]
 ${lbl_prgmSection_path}         //h2[contains(text(),"<placeholder>")]
 ${txt_prgmSectionData_xpath}
-...    //h2[contains(text(),"<placeholder>")]/following-sibling::*[self::p or self::div]
+...                             //h2[contains(text(),"<placeholder>")]/following-sibling::*[self::p or self::div]

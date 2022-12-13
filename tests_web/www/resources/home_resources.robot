@@ -1,9 +1,9 @@
 *** Settings ***
 Library     Selenium2Library
-Resource    ..//page_obj//home_pageObj.robot
-Resource    ..//page_obj//header_pageObj.robot
-Library     ..//..//..//tools//utils//url_formatter.py
-Resource    ..//..//web_utils//util.robot
+Resource    ${CURDIR}//..//page_obj//home_pageObj.robot
+Resource    ${CURDIR}//..//page_obj//header_pageObj.robot
+Library     ${CURDIR}//..//..//..//tools//utils//url_formatter.py
+Resource    ${CURDIR}//..//..//web_utils//util.robot
 
 
 *** Keywords ***

@@ -1,5 +1,5 @@
 *** Settings ***
-Resource            ..//resources//home_resources.robot
+Resource            ${CURDIR}//..//resources//home_resources.robot
 
 Test Teardown       Close All Browsers
 
