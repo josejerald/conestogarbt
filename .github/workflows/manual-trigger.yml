@@ -13,8 +13,8 @@ jobs:
       run: docker build --rm -f "Dockerfile" -t gcrobot:qa .
       
     - name: "Ubuntu Xvfb"
-        if: ${{ matrix.platform == 'ubuntu-latest' }}
-        run: |
+      if: ${{ matrix.platform == 'ubuntu-latest' }}
+      run: |
           export DISPLAY=:13.0
           Xvfb :13 -screen 0 1920x1080x24 > /dev/null 2>&1 &
           # xauth with complain unless ~/.Xauthority exists
