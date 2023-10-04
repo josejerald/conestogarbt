@@ -9,6 +9,7 @@ __pycache__/
 # report folder
 report
 report/
+reports/
 
 # Distribution / packaging
 .Python
